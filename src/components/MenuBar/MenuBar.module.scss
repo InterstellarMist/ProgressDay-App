@@ -1,0 +1,78 @@
+.menuBarDiv {
+  position: absolute;
+  bottom: 0;
+
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  height: 114px;
+}
+
+.addButton {
+  width: 80px;
+  height: 80px;
+  background: #232b32;
+  border: 4px solid #232b32;
+
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.25),
+    -4px -4px 10px rgba(255, 255, 255, 0.1),
+    inset -8px -8px 10px rgba(0, 0, 0, 0.25),
+    inset 8px 8px 10px rgba(255, 255, 255, 0.1);
+  border-radius: 46.5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 101;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:active {
+    /* Neumorphic button pressed */
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.25),
+      -4px -4px 10px rgba(255, 255, 255, 0.1),
+      inset 8px 8px 10px rgba(0, 0, 0, 0.25),
+      inset -8px -8px 10px rgba(255, 255, 255, 0.1);
+  }
+}
+
+.menuBarContainer {
+  position: absolute;
+  bottom: 0;
+
+  display: flex;
+  z-index: 100;
+}
+
+.lowerBar {
+  bottom: 0;
+  position: absolute;
+  height: 71px;
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.menuIconDiv {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: #181e23;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.selected {
+  box-shadow: 'inset 4px 4px 4px rgba(0, 0, 0, 0.25), inset -4px -4px 4px rgba(255, 255, 255, 0.1)';
+}
+
+.menuIcon {
+  width: 36px;
+}

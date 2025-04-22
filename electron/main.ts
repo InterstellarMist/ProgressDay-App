@@ -1,9 +1,9 @@
 import { app, BrowserWindow } from 'electron'
-import { createRequire } from 'node:module'
+// import { createRequire } from 'node:module'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 
-const require = createRequire(import.meta.url)
+// const require = createRequire(import.meta.url)
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 // The built directory structure
@@ -28,11 +28,32 @@ let win: BrowserWindow | null
 
 function createWindow() {
   win = new BrowserWindow({
+    show: false,
+    width: 400,
+    height: 800,
+    resizable: false,
+    autoHideMenuBar: true,
+    useContentSize: true,
+    alwaysOnTop: true,
     icon: path.join(process.env.VITE_PUBLIC, 'electron-vite.svg'),
     webPreferences: {
       preload: path.join(__dirname, 'preload.mjs'),
     },
   })
+
+  win.once('ready-to-show', () => {
+    if (win) win.show()
+  })
+
+  win.on('closed', () => {
+    win = null
+  })
+
+  // Open urls in the user's browser
+  // win.webContents.on('new-window', (event, url) => {
+    // event.preventDefault();
+    // shell.openExternal(url);
+  // });
 
   // Test active push message to Renderer-process.
   win.webContents.on('did-finish-load', () => {
@@ -65,4 +86,4 @@ app.on('activate', () => {
   }
 })
 
-app.whenReady().then(createWindow)
+app.whenReady().then(createWindow).catch(console.log)
