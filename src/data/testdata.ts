@@ -25,7 +25,7 @@ const testdata: Task[] = [
     started: '2020-12-26T13:38:50.837Z',
     streak: 4,
     taskId: 3,
-    taskName: 'Study',
+    taskName: 'Programming',
     inStreak: false,
   },
   {
