@@ -2,8 +2,8 @@
 # ProgressDay
 
 <div align="center">
-  <img src="./Readme/progressday-landing.png" alt="ProgressDay Landing Demo" width="250"/>
-  <img src="./Readme/progressday-homepage.png" alt="ProgressDay Home Demo" width="250"/>
+  <img src="./Readme/progressday-landing.png" alt="ProgressDay Landing Demo" width="300"/>
+  <img src="./Readme/progressday-homepage.png" alt="ProgressDay Home Demo" width="300"/>
 </div>
 
 ProgressDay is a modern productivity app focused on helping users build habits and track their progress over time. While its core is a habit tracker, ProgressDay is designed to grow into a comprehensive productivity suite, with planned features such as analytics, achievements, and social interaction with friends.
